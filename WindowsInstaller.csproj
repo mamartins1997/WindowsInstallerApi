@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeIdentifiers>win10-x64;</RuntimeIdentifiers>
+    <OutputType>Exe</OutputType> 
+  </PropertyGroup>
+
+<ItemGroup>
+  <Content Include="..\WindowsInstaller\wwwroot\**" Link="wwwroot\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="Always" />
+</ItemGroup>
+
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="2.1.1" />
+</ItemGroup>
+
+</Project>
